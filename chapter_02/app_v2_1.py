@@ -7,11 +7,12 @@ import pandas as pd
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-poverty_data = pd.read_csv('../data/PovStatsData.csv')
+poverty_data = pd.read_csv(r'D:\repos\Interactive-Dashboards-and-Data-Apps-with-Plotly-and-Dash\data\PovStatsData.csv')
 
 app.layout = html.Div([
     html.H1('Poverty And Equity Database'),
     html.H2('The World Bank'),
+    
     dcc.Dropdown(id='country',
                  options=[{'label': country, 'value': country}
                           for country in poverty_data['Country Name'].unique()]),

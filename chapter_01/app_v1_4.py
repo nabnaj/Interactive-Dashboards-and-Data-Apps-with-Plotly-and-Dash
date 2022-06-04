@@ -21,10 +21,10 @@ app.layout = html.Div([
                    'Source: ',
                    html.A('https://datacatalog.worldbank.org/dataset/poverty-and-equity-database',
                           href='https://datacatalog.worldbank.org/dataset/poverty-and-equity-database')
-               ])
-           ])
+               ])#li
+           ])#ul
 
-       ], label='Key Facts'),
+       ], label='Key Facts'), #tab
         dbc.Tab([
             html.Ul([
                 html.Br(),
@@ -34,7 +34,7 @@ app.layout = html.Div([
                                 href='https://github.com/PacktPublishing/Interactive-Dashboards-and-Data-Apps-with-Plotly-and-Dash')
                          ])
             ])
-        ], label='Project Info')
+        ], label='Project Info') #another tab
     ]),
 ])
 
